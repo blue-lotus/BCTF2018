@@ -1,0 +1,14 @@
+# replace helloworld to your program
+service ctf
+{
+    disable = no
+    socket_type = stream
+    protocol    = tcp
+    wait        = no
+    user        = root
+    bind        = 0.0.0.0
+    server      = /usr/bin/python
+    server_args = /home/ctf/server.py
+    type        = UNLISTED
+    port        = 23334
+}
